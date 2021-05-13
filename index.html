@@ -1,0 +1,93 @@
+<html>
+<head>
+    <title>Tetris Game JS</title>
+    <style>
+		
+		body {
+			background-color: pink;
+			color: white;
+			
+		}
+		* {
+			padding: 0;	
+			margin: 0;
+			border: 0;
+			font-family: sans-serif;
+			box-sizing: border-box;
+		}
+		#scores{
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+        #score{
+            display: inline-block;
+			font-size: 60px;
+        }
+        div{
+            font-size: 25px;
+            font-weight: bold;
+            font-family: monospace;
+            text-align: center;
+        }
+		.smol {
+			font-size: 16px;
+			font-weight: normal;
+		}
+		#highscore {
+			margin-top: 7px;
+			font-weight: bold;
+		}
+        canvas{
+            display: block;
+            margin:0 auto;
+        }
+		hr {
+			border-bottom: 1px solid red;
+			width: 100%;
+		}
+		button {
+			cursor: pointer;
+			width: 60px;
+			height: 60px;
+			font-size: 45px;
+			color: #FFFFFF;
+			background: 0;
+			font-weight: bold;
+		}
+		button:hover {
+			background-color: rgba(255,255,255,0.3)
+		}
+		.middle-row {
+			padding-top: 5px;
+			padding-bottom: 5px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.placeholder {
+			width: 60px;
+			height:60px;
+			z-index: -9999;
+		}
+    </style>
+	<link rel="favicon" hef="incon.png" />
+</head>
+<body>
+	<div id="scores">
+		<div class="middle-row">
+			<button id="restart-button">&#8634;</button>
+			<span id="score">0</span>
+			<div class="placeholder"></div>
+		</div>
+		<hr />
+		<span class="smol">High Score: <span id="highScore">0</span></span>
+    </div>
+	<canvas id="tetris" width="300" height="600"></canvas>
+    <script src="tetrominoes.js"></script>
+    <script src="tetris.js"></script>
+</body>
+</html>
